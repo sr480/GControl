@@ -14,5 +14,7 @@ namespace GControl.Axis
             Destination = destination;
             Time = time;
         }
+
+
     }
 }

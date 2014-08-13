@@ -20,15 +20,20 @@ namespace GControl
             X = new Axis.Axis();
             X.PulsePerUnit = 2;
             X.MinTicksPerPulse = 1;
+            X.Name = "X";
             Y = new Axis.Axis();
             Y.PulsePerUnit = 2;
             Y.MinTicksPerPulse = 1;
+            Y.Name = "Y";
             _ticker.Register(X);
             _ticker.Register(Y);
             _ticker.Start();
 
-            X.AddPlan(new Axis.PlanPoint(50, 30000.0 /Axis.Ticker.TICKDuration));
-            Y.AddPlan(new Axis.PlanPoint(50, 30000.0 / Axis.Ticker.TICKDuration));
+            Axis.MotionHelper.Linear2D(X, 50, Y, 20, 20.0);
+            Axis.MotionHelper.Linear2D(X, 20, Y, 20, 20.0);
+            Axis.MotionHelper.Linear2D(X, 20, Y, 50, 20.0);
+
+
         }
         #region INotifyPropertyChanged
         private SynchronizationContext _synchronizationContext = SynchronizationContext.Current;
