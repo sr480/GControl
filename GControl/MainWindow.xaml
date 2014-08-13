@@ -3,6 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Line X1="0" X2="{Binding X.Current}" Y1="0" Y2="{Binding Y.Current}" Stroke="Black" />
     </Grid>
 </Window>

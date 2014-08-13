@@ -21,6 +21,7 @@ namespace GControl
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
         }
     }
 }

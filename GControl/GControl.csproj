@@ -54,6 +54,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Axis\Axis.cs" />
+    <Compile Include="Axis\Interface.cs" />
+    <Compile Include="Axis\PlanPoint.cs" />
+    <Compile Include="Axis\Ticker.cs" />
+    <Compile Include="MainViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
