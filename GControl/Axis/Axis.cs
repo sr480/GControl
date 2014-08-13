@@ -96,28 +96,9 @@ namespace GControl.Axis
             set
             {
                 _MinTicksPerPulse = value;
-                _currentTickCounter = TicksPerPulse;
             }
         }
-
-        private int TicksPerPulse
-        {
-            get
-            {
-                if (_currentPlanPoint == null)
-                {
-                    if (_plan.Count > 0)
-                        _currentPlanPoint = _plan.Peek();
-                    else
-                        return 0;
-                }
-
-                return (int)(_currentPlanPoint.Time / (_currentPlanPoint.Destination * (double)PulsePerUnit));
-            }
-        }
-        
-        
-
+              
         public Axis()
         {   }
 
