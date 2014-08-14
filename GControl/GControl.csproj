@@ -57,8 +57,10 @@
     <Compile Include="Axis\Axis.cs" />
     <Compile Include="Axis\Interface.cs" />
     <Compile Include="Axis\Linear.cs" />
+    <Compile Include="Axis\Matrix2x2.cs" />
     <Compile Include="Axis\PlanPoint.cs" />
     <Compile Include="Axis\Ticker.cs" />
+    <Compile Include="Axis\Vector2D.cs" />
     <Compile Include="MainViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

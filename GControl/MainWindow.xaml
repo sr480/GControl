@@ -4,5 +4,17 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Line X1="0" X2="{Binding X.Current}" Y1="0" Y2="{Binding Y.Current}" Stroke="Black" />
+        <ItemsControl ItemsSource="{Binding Vectors}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Line X1="0" X2="{Binding X}" Y1="0" Y2="{Binding Y}" Stroke="Black" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>  
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
     </Grid>
 </Window>
